@@ -51,11 +51,28 @@ export class TasksComponent implements OnInit {
   }
 
   toggleEditing(): void {
-    this.isEditing = !this.isEditing; // Toggle between true and false
+    this.isEditing = !this.isEditing;
+    if (!this.isEditing) {
+      // Reset selectedTask when exiting editing mode
+      this.selectedTask = {
+        _id: '',
+        title: '',
+        description: '',
+        status: 'pending',
+        dueDate: '',
+      };
+    }
   }
 
   onTaskSaved(): void {
     this.isEditing = false;
+    this.selectedTask = {
+      _id: '',
+      title: '',
+      description: '',
+      status: 'pending',
+      dueDate: '',
+    }; // Reset task
     this.loadTasks(); // Reload tasks to reflect the changes
   }
 
