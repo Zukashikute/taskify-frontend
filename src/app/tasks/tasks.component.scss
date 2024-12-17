@@ -1,0 +1,44 @@
+.tasks-wrapper {
+  > button {
+    margin: 1rem 0;
+    background-color: #ffdbb5;
+    border: 1px solid #603f26;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.1s ease-in;
+    font-size: 15px;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 3px 1px #6c4e31;
+    }
+  }
+}
+
+.tasks-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  > select {
+    background-color: #ffdbb5;
+    border: 1px solid #603f26;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.1s ease-in;
+
+    option {
+      font-family: "Rubik", sans-serif;
+      
+      &:hover {
+        background-color: #603f26;
+        color: #ffdbb5;
+      }
+    }
+
+    &:hover {
+      box-shadow: 1px 1px 3px 1px #6c4e31;
+    }
+  }
+}

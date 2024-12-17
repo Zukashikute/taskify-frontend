@@ -1,0 +1,30 @@
+.taskify-app-wrapper {
+  background-color: #ffdbb5;
+  max-width: 1600px;
+  margin: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+
+  > h1 {
+    font-family: "Fleur De Leah", cursive;
+    font-size: 40px;
+    cursor: pointer;
+    text-decoration: underline;
+    width: max-content;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      color: #ba640f;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .taskify-app-wrapper {
+    margin: 3rem;
+
+    > h1 {
+      font-size: 35px;
+    }
+  }
+}

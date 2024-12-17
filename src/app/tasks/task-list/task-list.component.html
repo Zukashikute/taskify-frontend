@@ -1,0 +1,14 @@
+<div class="task-list-wrapper">
+  <h2>Action Board</h2>
+  <ul *ngIf="tasks && tasks.length > 0; else noTasks">
+    <li *ngFor="let task of tasks">
+      <app-task-item
+        [task]="task"
+        (delete)="delete.emit($event)"
+      ></app-task-item>
+    </li>
+  </ul>
+  <ng-template #noTasks>
+    <p class="tasklist-none-text">No tasks found</p>
+  </ng-template>
+</div>

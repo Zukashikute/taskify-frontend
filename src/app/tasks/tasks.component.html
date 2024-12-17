@@ -1,0 +1,30 @@
+<div class="tasks-wrapper">
+  <button (click)="toggleEditing()">
+    {{ isEditing ? "Cancel" : "Add New Task" }}
+  </button>
+
+  <div *ngIf="isEditing">
+    <app-task-form
+      [task]="selectedTask"
+      (taskSaved)="onTaskSaved()"
+    ></app-task-form>
+  </div>
+  <div *ngIf="!isEditing">
+    <!-- Filter tasks by status -->
+    <div class="tasks-select-wrapper">
+      <label for="status">Filter by status:</label>
+      <select [(ngModel)]="selectedStatus" (change)="filterTasks()">
+        <option value="">All</option>
+        <option *ngFor="let status of statuses" [value]="status">
+          {{ status }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Pass filtered tasks to the task-list child component -->
+    <app-task-list
+      [tasks]="filteredTasks"
+      (delete)="deleteTask($event)"
+    ></app-task-list>
+  </div>
+</div>

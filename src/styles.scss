@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Text", serif;
+  margin: 0;
+  color: #0e0a06;
+}
+
+a,
+span,
+p,
+button,
+li,
+label,
+select,
+input,
+textarea {
+  font-family: "Rubik", sans-serif;
+  color: #1d140c;
+}
+
+body {
+  background-color: #6c4e31;
+}
+
+button,
+select {
+  cursor: pointer;
+}

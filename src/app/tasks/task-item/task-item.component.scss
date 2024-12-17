@@ -1,0 +1,69 @@
+.task-item-wrapper {
+  padding: 1rem;
+  background-color: #ffeac5;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  height: calc(100% - 2rem);
+  gap: 0.75rem;
+  
+  > p {
+    margin: 0;
+  }
+}
+
+.taskitem-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+
+  > button {
+    background-color: #603f26;
+    border: 1px solid #603f26;
+    color: #ffeac5;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.75rem 0.25rem;
+    transition: all 0.1s ease-in;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 3px 1px #6c4e31;
+    }
+  }
+
+  > button:first-of-type {
+    &:hover {
+      color: #0c9fcc;
+      border: 1px solid #0c9fcc;
+      box-shadow: 1px 1px 3px 1px #0c9fcc;
+      background-color: #ffdbb5;
+    }
+  }
+
+  > button:last-of-type {
+    &:hover {
+      color: #c32c2c;
+      border: 1px solid #c32c2c;
+      box-shadow: 1px 1px 3px 1px #c32c2c;
+      background-color: #ffdbb5;
+    }
+  }
+}
+
+.past-due {
+  color: #993636;
+}
+
+.status-completed {
+  color: #24b85d;
+}
+
+.status-pending {
+  color: #ea8928;
+}
+
+.status-in-progress {
+  color: #2c51ad;
+}

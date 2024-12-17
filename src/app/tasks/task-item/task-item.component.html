@@ -1,0 +1,23 @@
+<div class="task-item-wrapper">
+  <h3>{{ task.title }}</h3>
+  <p>{{ task.description }}</p>
+  <p>
+    Due Date:
+    <span [ngClass]="{ 'past-due': isDatePast(task.dueDate) }">{{
+      task.dueDate | date
+    }}</span>
+  </p>
+  <p>
+    Status:
+    <span [ngClass]="getStatusClass(task.status)">{{ task.status }}</span>
+  </p>
+  <!-- Optional: Style based on status -->
+  <div class="taskitem-btn-wrapper">
+    <button [routerLink]="['/tasks', task._id, 'edit']">Edit</button>
+    <button (click)="onDelete()">Delete</button>
+  </div>
+  <app-confirm-dialog
+    *ngIf="showModal"
+    (confirm)="deleteTask($event)"
+  ></app-confirm-dialog>
+</div>

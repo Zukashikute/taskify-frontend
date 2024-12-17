@@ -1,0 +1,103 @@
+.task-form-wrapper {
+  width: max-content;
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+  border: 1px solid #603f26;
+  border-radius: 0.5rem;
+}
+
+.taskform-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem;
+
+  > input,
+  textarea {
+    outline: 0;
+    border: 1px solid #603f26;
+    background-color: #ffeac5;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #603f26;
+    }
+  }
+}
+
+.taskform-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 1rem;
+
+  > select {
+    background-color: #ffdbb5;
+    border: 1px solid #603f26;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.1s ease-in;
+
+    option {
+      font-family: "Rubik", sans-serif;
+
+      &:hover {
+        background-color: #603f26;
+        color: #ffdbb5;
+      }
+    }
+
+    &:hover {
+      box-shadow: 1px 1px 3px 1px #6c4e31;
+    }
+  }
+}
+
+.taskform-error-message {
+  > p {
+    color: #c32c2c;
+  }
+}
+
+.taskform-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+
+  > button {
+    background-color: #603f26;
+    border: 1px solid #603f26;
+    color: #ffeac5;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem 0.25rem;
+    transition: all 0.1s ease-in;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 3px 1px #6c4e31;
+    }
+  }
+
+  > .firstButton {
+    &:hover {
+      color: #0c9fcc;
+      border: 1px solid #0c9fcc;
+      box-shadow: 1px 1px 3px 1px #0c9fcc;
+      background-color: #ffdbb5;
+    }
+  }
+
+  > .lastButton {
+    &:hover {
+      color: #c32c2c;
+      border: 1px solid #c32c2c;
+      box-shadow: 1px 1px 3px 1px #c32c2c;
+      background-color: #ffdbb5;
+    }
+  }
+}

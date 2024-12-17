@@ -1,0 +1,67 @@
+.confirm-dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-dialog-wrapper {
+  border-radius: 0.5rem;
+  border: 1px solid #603f26;
+  background-color: #ffeac5;
+  padding: 1.5rem;
+  width: max-content;
+
+  > h2 {
+    font-family: "Rubik", sans-serif;
+    color: #1d140c;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+
+  p {
+    font-family: "Rubik", sans-serif;
+    color: #1d140c;
+    letter-spacing: 0;
+  }
+}
+
+.confirmdialog-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  > button {
+    background-color: #603f26;
+    border: 1px solid #603f26;
+    color: #ffeac5;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem 0.25rem;
+    transition: all 0.1s ease-in;
+    font-weight: 500;
+  }
+
+  > .firstButton {
+    &:hover {
+      color: #0c9fcc;
+      border: 1px solid #0c9fcc;
+      box-shadow: 1px 1px 3px 1px #0c9fcc;
+      background-color: #ffdbb5;
+    }
+  }
+
+  > .lastButton {
+    &:hover {
+      color: #c32c2c;
+      border: 1px solid #c32c2c;
+      box-shadow: 1px 1px 3px 1px #c32c2c;
+      background-color: #ffdbb5;
+    }
+  }
+}

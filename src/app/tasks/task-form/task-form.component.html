@@ -1,0 +1,57 @@
+<div class="task-form-wrapper">
+  <h2>{{ taskId ? "Edit" : "Create" }} Task</h2>
+  <form (ngSubmit)="saveTask()">
+    <div class="taskform-input-wrapper">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        [(ngModel)]="task.title"
+        name="title"
+        placeholder="Enter a title"
+        required
+      />
+    </div>
+
+    <div class="taskform-input-wrapper">
+      <label for="description">Description:</label>
+      <textarea
+        [(ngModel)]="task.description"
+        name="description"
+        placeholder="Enter a description"
+        rows="5"
+      ></textarea>
+    </div>
+
+    <div class="taskform-input-wrapper">
+      <label for="dueDate">Due Date:</label>
+      <input type="date" [(ngModel)]="task.dueDate" name="dueDate" />
+    </div>
+
+    <div class="taskform-select-wrapper">
+      <label for="status">Status:</label>
+      <select [(ngModel)]="task.status" name="status" required>
+        <option *ngFor="let status of statuses" [value]="status">
+          {{ status }}
+        </option>
+      </select>
+    </div>
+
+    <div *ngIf="errorMessage" class="taskform-error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <div class="taskform-btn-wrapper">
+      <button class="firstButton" type="submit">
+        {{ taskId ? "Update" : "Create" }} Task
+      </button>
+      <button
+        class="lastButton"
+        *ngIf="taskId"
+        type="button"
+        (click)="cancel()"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

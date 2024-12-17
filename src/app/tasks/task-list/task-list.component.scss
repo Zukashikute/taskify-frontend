@@ -1,0 +1,32 @@
+.task-list-wrapper {
+  margin-top: 2rem;
+
+  ul {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      border: 1px solid #603f26;
+      list-style: none;
+      border-radius: 1rem;
+      max-width: 300px;
+      width: 100%;
+      background-color: #ffeac5;
+    }
+  }
+}
+
+.tasklist-none-text {
+  text-align: center;
+}
+
+@media screen and (min-width: 744px) {
+  .task-list-wrapper {
+    ul {
+      justify-content: start;
+    }
+  }
+}
